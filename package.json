@@ -1,0 +1,19 @@
+{
+  "name": "projectech",
+  "version": "1.0.0",
+  "description": "project tech",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeunvK/BlokTech.git"
+  },
+  "author": "Teun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TeunvK/BlokTech/issues"
+  },
+  "homepage": "https://github.com/TeunvK/BlokTech#readme"
+}
