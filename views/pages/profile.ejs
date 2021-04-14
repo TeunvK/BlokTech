@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+    <img src="/images/userplaceholder.png" alt="placeholderimg" class="profilepicture">
+    <section class="accountinfo">
+        <h3>Name</h3>
+        <h3>Age</h3>
+        <h3>Favorite movie/show</h3>
+        <h3>A short about me</h3>
+        <p class="about">
+            Just some info about me
+        </p>
+    </section>
+    <section>
+        <h3>Movies / Shows I really like!</h3>
+        <a href="/profileEdit">+ New</a>
+        <% movieCards.forEach(movieCards => {%>
+            <div class="card">
+                <h3 class="card-title"><%= movieCards.title %></h3>
+                <p class="card-description"><%= movieCards.description %></p>
+                <q><%= movieCards.quote %></q>
+            </div>
+        <!-- %= Outputs the value into the template (HTML escaped) *https://ejs.co/ -->
+        <% }); %>
+
+    </section>
+    <footer>
+        <%- include('../partials/footer'); %>
+        <!-- %- Outputs the unescaped value into the template *https://ejs.co/ -->
+    </footer>
+</body>
+
+</html>
