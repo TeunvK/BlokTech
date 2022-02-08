@@ -1,0 +1,24 @@
+{
+  "name": "matchingappshows",
+  "version": "1.0.0",
+  "description": "A matching app based on tv shows",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeunvK/BlokTech.git"
+  },
+  "author": "Teun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TeunvK/BlokTech/issues"
+  },
+  "homepage": "https://github.com/TeunvK/BlokTech#readme",
+  "dependencies": {
+    "camelcase": "^6.3.0",
+    "express": "^4.17.2"
+  }
+}
