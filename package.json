@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,13 @@
   },
   "homepage": "https://github.com/TeunvK/BlokTech#readme",
   "dependencies": {
+    "busboy": "^1.4.0",
     "camelcase": "^6.3.0",
+    "dotenv": "^16.0.0",
+    "env": "^0.0.2",
     "express": "^4.17.2",
-    "express-handlebars": "^6.0.2"
+    "express-handlebars": "^6.0.2",
+    "mongoose": "^6.2.4"
   },
   "devDependencies": {
     "eslint": "^8.10.0",

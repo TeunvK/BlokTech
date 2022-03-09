@@ -1,7 +1,13 @@
-const express = require('express')
-const {engine} = require('express-handlebars')
+const express = require('express');
+const {engine} = require('express-handlebars');
+const { __esModule } = require('express-handlebars');
+const PORT = process.env.PORT || 3000 
+require('dotenv').config()
+const connectDB = require('./config/db')
+
 const app = express()
-const port = 3000
+
+connectDB();
 
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
@@ -19,15 +25,14 @@ app.get('/about', (req, res) => {
     person: {
       firstname: "Hans",
       lastname: "Anders",
-    } 
+    }
   });
 })
 
 app.get('*', (req, res) => {
-  res.send('404')
-  
+  res.send('Error 404')
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening on localhost:${port}`)
+app.listen(PORT, () => {
+  console.log(`App listening on localhost:${PORT}`)
 })
