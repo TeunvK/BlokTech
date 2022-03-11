@@ -1,0 +1,28 @@
+
+
+body{
+    background-color: FFFAFA;
+    color: rgb(235, 41, 41);
+}
+
+.inlogcontainer{
+    display: flex;
+    justify-content: center;
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 20em;
+        background-color: rgb(235, 41, 41);
+        align-self: center;
+        color: #ffffff ;
+        font-weight: 700;
+        padding: 4em;
+        padding-top: 2em;
+        font-size: large;
+        border-radius: 10px;
+        list-style-type: none;
+    }
+}

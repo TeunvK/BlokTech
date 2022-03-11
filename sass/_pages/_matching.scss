@@ -1,0 +1,15 @@
+.profile-container {
+    margin: auto;
+    width: 50%;
+
+    color: $primary-color;
+    .person {
+        display: flex;
+        justify-content: center;
+
+        .placeholder-person {
+            max-width: 20em;
+            border-radius: 2em;
+        }
+    }
+}

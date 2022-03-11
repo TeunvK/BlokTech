@@ -1,6 +1,5 @@
 const express = require('express');
 const {engine} = require('express-handlebars');
-const { __esModule } = require('express-handlebars');
 const PORT = process.env.PORT || 3000 
 require('dotenv').config()
 const connectDB = require('./config/db')
@@ -17,7 +16,12 @@ app.set('views', './views');
 app.use(express.static(__dirname + '/static'));
 
 app.get('/', (req, res) => {
-  res.render('home');
+  res.render('login');
+})
+
+app.get('/match', (req, res) => {
+  res.render('match', {
+  });
 })
 
 app.get('/about', (req, res) => {
