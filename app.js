@@ -8,7 +8,11 @@ const app = express()
 
 connectDB();
 
-app.engine('handlebars', engine());
+app.engine('handlebars', engine({
+  defaultLayout: 'main',
+  layoutsDir: __dirname + '/views/layouts',
+  partialsDir: __dirname +'/views/partials'
+}));
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
@@ -21,6 +25,17 @@ app.get('/', (req, res) => {
 
 app.get('/match', (req, res) => {
   res.render('match', {
+    shows: [
+      {
+      name: 'Falling skies',
+      image: 'Falling skies image'
+    },
+     {
+      name: "Game of Thrones",
+      image: "Game of Thrones image"
+    }
+  ]
+
   });
 })
 
