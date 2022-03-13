@@ -1,4 +1,4 @@
-# NextEp
+![Logo](https://github.com/TeunvK/BlokTech/blob/main/assets/logo.png)
 This repository is for a matching App made for BlokTech 21-22.
 NextEp is a matching app that matches people that watch the same tv shows. This way you can connect with others and watch your favorite shows together.
 
