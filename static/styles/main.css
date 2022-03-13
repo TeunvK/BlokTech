@@ -100,6 +100,10 @@ body {
   max-width: 20em;
   border-radius: 2em;
 }
+.profile-container .shows h2:first-child {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
 .profile-container .shows .show-list {
   display: flex;
 }
