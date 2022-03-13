@@ -1,21 +1,25 @@
-<h2>dit is de matchpage</h2>
+<header>
+    <img src="images/logo.png" class="logo">
+    <nav><img src="images/home.png" class="home-button"></nav>
+</header>
+<main>
+    <div class="profile-container">
+        <section class="person">
+            <img src="images/matching/placeholder-person.png" class="placeholder-person">
+            <ul>
+                <li class="person-name">{{name}}</li>
+                <li class="person-age">{{age}}</li>
+                <li class="person-about">{{about}}</li>
+            </ul>
+        </section>
+        <section class="shows">
+            <h2>Shows you both watch</h2>
+            <ul class="show-list">
+                {{#each shows}}
+                <li>{{> similairShow }}</li>
+                {{/each}}
 
-<div class="profile-container">
-    <section class="person">
-        <img src="images/matching/placeholder-person.png" class="placeholder-person">
-        <ul>
-            <li>{{name}}test</li>
-            <li>{{age}} Jaar</li>
-            <li>{{about}}test2</li>
-        </ul>
-    </section>
-    <section class="shows">
-        <h2>Shows you both want to watch</h2>
-        <ul class="show-list">
-            {{#each shows}}
-                    <li>{{> similairShow }}</li>
-            {{/each}}
-
-        </ul>
-    </section>
-</div>
+            </ul>
+        </section>
+    </div>
+</main>

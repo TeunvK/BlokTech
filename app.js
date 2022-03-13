@@ -1,4 +1,6 @@
 const express = require("express");
+
+const matchRouter = require("./routes/match");
 const {
 	engine
 } = require("express-handlebars");
@@ -18,6 +20,8 @@ app.engine("handlebars", engine({
 app.set("view engine", "handlebars");
 app.set("views", "./views");
 
+app.use("/match", matchRouter);
+
 
 app.use(express.static(__dirname + "/static"));
 
@@ -25,20 +29,7 @@ app.get("/", (req, res) => {
 	res.render("login");
 });
 
-app.get("/match", (req, res) => {
-	res.render("match", {
-		shows: [{
-			name: "Falling skies",
-			image: "Falling skies image"
-		},
-		{
-			name: "Game of Thrones",
-			image: "Game of Thrones image"
-		}
-		]
 
-	});
-});
 
 app.get("/about", (req, res) => {
 	res.render("about", {

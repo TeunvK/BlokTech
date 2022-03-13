@@ -87,18 +87,58 @@ body {
   margin-top: 0;
 }
 
+header {
+  width: 100%;
+  position: absolute;
+}
+
+.logo {
+  position: absolute;
+}
+
+nav {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 1.2em;
+}
+nav .home-button {
+  max-width: 2.5rem;
+}
+
 .profile-container {
+  left: 0;
+  right: 0;
   margin: auto;
   width: 50%;
   color: #2B2D42;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .profile-container .person {
   display: flex;
   justify-content: center;
 }
+.profile-container .person ul {
+  margin-left: 0.8rem;
+}
+.profile-container .person ul li {
+  font-weight: 600;
+  padding: 0.2rem;
+}
+.profile-container .person ul .person-name {
+  font-size: 2em;
+}
+.profile-container .person ul .person-age {
+  font-size: 1.2em;
+}
+.profile-container .person ul .person-about {
+  font-weight: 400;
+}
 .profile-container .person .placeholder-person {
   max-width: 20em;
-  border-radius: 2em;
+  border-radius: 3em;
+  border: 0.2em solid #8D99AE;
 }
 .profile-container .shows h2:first-child {
   margin-top: 0.8em;
@@ -106,9 +146,16 @@ body {
 }
 .profile-container .shows .show-list {
   display: flex;
+  justify-content: space-around;
 }
 .profile-container .shows .show-list li {
-  margin: 1rem;
+  width: 30%;
+}
+.profile-container .shows .show-list .show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

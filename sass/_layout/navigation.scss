@@ -1,0 +1,18 @@
+header{
+    width: 100%;
+    position: absolute;
+}
+.logo{
+    position: absolute;
+}
+
+nav{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 1.2em;
+
+    
+    .home-button{
+        max-width: 2.5rem;
+    }
+}

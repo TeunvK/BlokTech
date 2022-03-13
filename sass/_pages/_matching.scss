@@ -1,15 +1,39 @@
+
 .profile-container {
+    left: 0;
+    right: 0;
     margin: auto;
     width: 50%;
-
     color: $primary-color;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     .person {
         display: flex;
         justify-content: center;
 
+        ul{
+            margin-left: 0.8rem;
+            li{
+                font-weight: 600;
+                padding: 0.2rem;
+            }
+            .person-name{
+                font-size: 2em;
+            }
+            .person-age{
+                font-size: 1.2em;
+            }
+            .person-about{
+                font-weight: 400;
+            }
+        }
+
+
         .placeholder-person {
             max-width: 20em;
-            border-radius: 2em;
+            border-radius: 3em;
+            border: 0.2em solid $primary-shade
         }
     }
 
@@ -21,8 +45,17 @@
 
         .show-list{
             display: flex;
+            justify-content: space-around;
+
             li{
-                margin: 1rem;
+                width: 30%;
+            }
+
+            .show{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
             }
         }
     }
