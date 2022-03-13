@@ -1,0 +1,11 @@
+@mixin center-horizontal{
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@mixin center-vertical {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}

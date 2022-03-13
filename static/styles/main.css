@@ -105,12 +105,21 @@ nav .home-button {
   max-width: 2.5rem;
 }
 
-.profile-container {
+.inlogcontainer {
   left: 0;
   right: 0;
   margin: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.profile-container {
   width: 50%;
   color: #2B2D42;
+  left: 0;
+  right: 0;
+  margin: auto;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

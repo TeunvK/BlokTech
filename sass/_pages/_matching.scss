@@ -1,13 +1,9 @@
 
 .profile-container {
-    left: 0;
-    right: 0;
-    margin: auto;
     width: 50%;
     color: $primary-color;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    @include center-horizontal;
+    @include center-vertical;
     .person {
         display: flex;
         justify-content: center;
