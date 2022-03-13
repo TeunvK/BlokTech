@@ -12,4 +12,13 @@
             border-radius: 2em;
         }
     }
+
+    .shows{
+        .show-list{
+            display: flex;
+            li{
+                margin: 1rem;
+            }
+        }
+    }
 }
