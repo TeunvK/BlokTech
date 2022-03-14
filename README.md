@@ -16,6 +16,6 @@ Install the dependencies with:
 
 Run the server with:
 
-> npm start dev
+> npm run dev
 
 And go to: [localhost:3000](localhost:3000)
