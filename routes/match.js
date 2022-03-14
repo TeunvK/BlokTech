@@ -1,29 +1,12 @@
 const express = require("express");
+const res = require("express/lib/response");
 const router = express.Router();
+const controller = require("../controllers/match");
 
 
-router.get("/", (req, res) => {
-	res.render("match", {
-        name: "Natasja",
-        age: "32 years",
-        about: "I love to binge series, mainly into post-apocalyptic and sci-fi shows but I can watch everything!",
-		shows: [{
-			name: "Falling skies",
-			image: "tbt"
-		},
-		{
-			name: "Game of Thrones",
-			image: "tbt"
-		},
-		{
-			name: "Deadly class",
-			image: "tbt"
-		}
-		]
 
-	});
-});
 
+router.get('/', controller.match);
 
 
 module.exports = router;

@@ -56,3 +56,15 @@
         }
     }
 }
+
+.match-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 45%;
+    position: absolute;
+    img{
+        max-width: 5rem;
+        margin: 0 4rem 0 4rem;
+    }
+}
