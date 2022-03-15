@@ -8,6 +8,12 @@ const userSchema = new mongoose.Schema({
         },
         age: {
                 type: Number
+        },
+        about:{
+                type: String
+        },
+        favShows:{
+                type: [mongoose.SchemaTypes.ObjectId]
         }
 });
 

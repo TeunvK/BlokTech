@@ -22,6 +22,7 @@ app.set("views", "./views");
 app.use(express.static(__dirname + "/static"));
 
 
+
 // Body parser
 const bodyParser = require("body-parser");
 const urlencodedParser = bodyParser.urlencoded({ extended: true });

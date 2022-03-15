@@ -1,28 +1,60 @@
-const user = require('../models')
+const { user, tvshow } = require('../models')
 
-const match = (req, res) => {
-    res.render("match", {
-        name: "Natasja",
-        age: "32 years",
-        about: "I love to binge series, mainly into post-apocalyptic and sci-fi shows but I can watch everything!",
-		shows: [{
-			name: "Falling skies",
-			image: "tbt"
-		},
-		{
-			name: "Game of Thrones",
-			image: "tbt"
-		},
-		{
-			name: "Deadly class",
-			image: "tbt"
-		}
-		]
+const match = async (req, res) => {
 
-	});
+	user.count().exec(function (err, count) {
+
+		// Get a random entry
+		const random = Math.floor(Math.random() * count)
+	
+		// Again query all users but only fetch one offset by our random #
+		user.findOne().skip(random).exec(
+		function (err, result) {
+			const name = result.name;
+			const age = result.age;
+			const about = result.about;
+
+			res.render("match", {
+				name: name,
+				age: age,
+				about: about,
+				shows: [{
+					name: "Falling skies",
+					image: "tbt"
+				},
+				{
+					name: "Game of Thrones",
+					image: "tbt"
+				},
+				{
+					name: "Deadly class",
+					image: "tbt"
+				}
+				]
+			});
+
+			console.log(result.name) 
+		})
+	})
+	
+    
+	console.log("match triggered")
+	// Get the count of all users
+
+	// tvshow.findOne({}, function (err, test){
+	// 	console.log(test)
+	// })
+
+	
 };
 
 
+const getMatch = (req, res) => {
+
+}
+
+
 module.exports = {
-	match: match
+	match: match,
+	getMatch: getMatch
 };

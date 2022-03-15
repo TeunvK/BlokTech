@@ -1,26 +1,26 @@
 const { user } = require('../models');
 
 const login = (req, res) => {
-	console.log("testlog")
-	console.log(user.db.name); // myDatabase
-	user.find().lean().then(users => {
 
-		console.log(users);
-	
-	
 		res.render('login', {
-		  users:users,
-		});
-	  })
+	  });
 };
 
 const loggedIn = async (req, res) => {
 	try{
-		res.redirect('home')
-	} catch {
-		
+	const userName = req.body.name
+	const userExists = await user.exists({ name: userName }).select("name").lean();
+	if (userExists != null){
+		console.log(userExists)
+		const userId = userName
+		res.redirect(`home/${userId}`)
+	} else {
+		res.redirect("login")
 	}
-			
+	} catch (err){
+		console.log(err);
+		throw err;
+	}
 };
 
 
