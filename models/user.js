@@ -2,14 +2,14 @@ const mongoose = require("mongoose");
 
 //Define a schema
 const userSchema = new mongoose.Schema({
-    user: {
-        name: String,
-        age: Number
-    }
+        name:{
+                type: String,
+                required: true
+        },
+        age: {
+                type: Number
+        }
 });
 
-
 //compile schema into model
-const User = mongoose.model('user', userSchema);
-
-module.exports = User;
+module.exports = mongoose.model('user', userSchema); 
