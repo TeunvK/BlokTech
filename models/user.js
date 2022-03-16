@@ -12,10 +12,14 @@ const userSchema = new mongoose.Schema({
         about:{
                 type: String
         },
-        favShows:{
-                type: [mongoose.SchemaTypes.ObjectId]
-        }
+        favShows:[{
+                type: mongoose.Schema.Types.ObjectId
+        }],
+        matches:[{
+                type: mongoose.Schema.Types.ObjectId
+        }]
 });
+
 
 //compile schema into model
 module.exports = mongoose.model('user', userSchema); 

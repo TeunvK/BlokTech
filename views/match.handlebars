@@ -1,12 +1,12 @@
 <header>
-    <img src="images/logo.png" class="logo">
-    <nav><img src="images/icons/home.png" class="home-button"></nav>
+    <img src="/images/logo.png" class="logo">
+    <nav><img src="/images/icons/home.png" class="home-button"></nav>
 </header>
 <main>
   
     <div class="profile-container">
         <section class="person">
-            <img src="images/matching/placeholder-person.png" class="placeholder-person">
+            <img src="/images/matching/placeholder-person.png" class="placeholder-person">
             <ul>
                 <li class="person-name">{{name}}</li>
                 <li class="person-age">{{age}}</li>
@@ -24,7 +24,14 @@
         </section>
     </div>
     <div class="match-buttons">
-        <a href="/match"><img src="images/icons/x-mark.png" alt="x-icon"></a>
-        <a href="/matchList"><img src="images/icons/check-mark.png" alt="checkmark-icon"></a>
+        <form action="/match/{{userName}}" method="POST">
+            <button type="submit" name="badMatch" value="{{name}}" class="btn"><img src="/images/icons/x-mark.png" alt="x-icon"></button>
+        </form>
+        <form action="/matchList/{{userName}}" method="POST">
+            <button type="submit" name="goodMatch" value="{{name}}" class="btn"><img src="/images/icons/check-mark.png" alt="checkmark-icon"></button>
+        </form>
     </div>
 </main>
+
+
+
