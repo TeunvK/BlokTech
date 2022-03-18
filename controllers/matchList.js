@@ -49,7 +49,7 @@ const matches =  async (req, res) => {
 	// });
 	try{
 		// const appUser = await user.find({name: req.params.userId}).lean().exec();
-		// const testtest = await user.distinct("matches", {name: req.params.userId});
+		 const testtest = await user.distinct("matches", {name: req.params.userId});
 		// 	const matchedPerson = await user.find({name: req.body.goodMatch}).lean().exec(function(error, user) {
 		// 		user.forEach(function(userObject) {
 				
@@ -63,20 +63,49 @@ const matches =  async (req, res) => {
 		// 	});
 		// });
 
-		user.aggregate
 
-		const appUser = await user.find({name: req.body.goodMatch { $in: {}}});
-		const matchedPerson = await user.find({name: req.body.goodMatch}).lean().exec(function(error, user) {
-			user.forEach(function(userObject) {
-				const UID = userObject._id;
+    //     console.log(testtest)
+	       const appUser = await user.find({name: req.params.userId})
+          const matchedPerson = await user.find({name: req.body.goodMatch})
+          console.log(matchedPerson)
+
+        //   user.findOneAndUpdate({name: req.params.userId}, {$push: {matches: matchedPerson}}).lean().exec();
+        
+    // //     user.find({matchedPerson: { $in:  appUser}}), function(err, docs){
+    // //         console.log(docs);
+    // //    };
+
+    //     console.log(req.body.goodMatch)
+        const isIncluded = user.find({name: req.body.goodMatch}).exec(function(error, checkUser) {
+            checkUser.forEach(function(userObject) {
+                const UID = userObject._id
+                console.log(UID)
+                if(testtest.toString().includes(userObject._id.toString())){
+                    				console.log("already included");
+                    			} else {
+                                    // matchedPerson.push({matches: matchedPerson});
+                                    console.log(appUser)
+                    				console.log("not included!");
+                    			}
+            });
+        });;
+
+        // if(appUser.includes(matchedPerson)){
+        //     				console.log("already included");
+        //     			} else {
+        //     				console.log("not included!");
+        //     			}
+		// const matchedPerson = await user.find({name: req.body.goodMatch}).lean().exec(function(error, user) {
+		// 	user.forEach(function(userObject) {
+		// 		const UID = userObject._id;
 			
 				
 
-			});
-		});
+		// 	});
+		// });
 
-		const appUser = await user.find({name: req.params.userId});
-		console.log(testtest);
+		// const appUser = await user.find({name: req.params.userId});
+		// console.log(testtest);
 
 		// const appUser = await user.findOneAndUpdate({name: req.params.userId}, {$push: {matches: matchedPerson}}).lean().exec();
 		// console.log(matchedPerson)
