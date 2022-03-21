@@ -1,7 +1,12 @@
 const { user, tvshow } = require("../models");
 
+async function getTvShows(){
+	const res = await fetch("https://www.episodate.com/api/show-details");
+	console.log(res);
+}
+
+
 const match = async (req, res) => {
-	
 	user.count().exec(function (err, count) {
 
 		// Get a random entry
@@ -12,43 +17,19 @@ const match = async (req, res) => {
 				const name = result.name;
 				const age = result.age;
 				const about = result.about;
+				console.log(result.favShows);
 
 				res.render("match", {
 					userName: req.params.userId,
 					name: name,
 					age: age,
 					about: about,
-					shows: [{
-						name: "Falling skies",
-						image: "tbt"
-					},
-					{
-						name: "Game of Thrones",
-						image: "tbt"
-					},
-					{
-						name: "Deadly class",
-						image: "tbt"
-					}
-					]
+					shows: result.favShows
 				});
 			});
 	});
-	
-    
-	console.log("match triggered");
-	// Get the count of all users
-
-	// tvshow.findOne({}, function (err, test){
-	// 	console.log(test)
-	// })
-
-	
 };
-
-
 const getMatch = (req, res) => {
-
 };
 
 

@@ -17,7 +17,7 @@
             <h2>Shows you both watch</h2>
             <ul class="show-list">
                 {{#each shows}}
-                <li>{{> similairShow }}</li>
+                    <li>{{> similairShow show=this}}</li>
                 {{/each}}
 
             </ul>
@@ -25,7 +25,7 @@
     </div>
     <div class="match-buttons">
         <form action="/match/{{userName}}" method="GET">
-            <button type="submit" value="{{name}}" class="btn"><img src="/images/icons/x-mark.png" alt="x-icon"></button>
+            <button type="submit" name="badMatch" value="{{name}}" class="btn"><img src="/images/icons/x-mark.png" alt="x-icon"></button>
         </form>
         <form action="/matchList/{{userName}}" method="POST">
             <button type="submit" name="goodMatch" value="{{name}}" class="btn"><img src="/images/icons/check-mark.png" alt="checkmark-icon"></button>

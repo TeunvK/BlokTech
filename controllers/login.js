@@ -1,24 +1,22 @@
-const { user } = require('../models');
+const { user } = require("../models");
 
 const login = (req, res) => {
 
-		res.render('login', {
-	  });
+	res.render("login");
 };
 
 const loggedIn = async (req, res) => {
 	try{
-	const userName = req.body.name
-	const userExists = await user.exists({ name: userName }).select("name").lean();
-	if (userExists != null){
-		console.log(userExists)
-		const userId = userName
-		res.redirect(`home/${userId}`)
-	} else {
-		res.redirect("login")
-	}
+		const userName = req.body.name;
+		const userExists = await user.exists({ name: userName }).select("name").lean();
+		if (userExists != null){
+			const userId = userName;
+			res.redirect(`home/${userId}`);
+		} else {
+			res.redirect("login");
+		}
 	} catch (err){
-		console.log(err);
+		console.message(err);
 		throw err;
 	}
 };
@@ -26,5 +24,5 @@ const loggedIn = async (req, res) => {
 
 module.exports = {
 	login: login,
-    loggedIn: loggedIn
+	loggedIn: loggedIn
 };
