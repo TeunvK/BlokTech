@@ -2,48 +2,30 @@ const {
 	user,
 	tvshow
 } = require("../models");
+const {
+	exists
+} = require("../models/user");
+const match = require("./match");
 
 const matches = async (req, res) => {
-	const userName = req.params.userId;
-	const userMatch = req.body.goodMatch;
 
+	const appUser = await user.find({name: req.params.userId})
+	const matchedPerson = await user.find({name: req.body.goodMatch});
+	const addToMatches = await user.findOneAndUpdate({name: req.params.userId}, {
+		$addToSet: {
+			matches: matchedPerson
+		}}).lean().exec();
+//$addToSet will add the matched person's ObjectID to the "matches" list of the app User if it does not already exist in there.
+		console.log(req.body)
 
-	user.find({
-		name: userName
-	}).lean().exec(function (error, owner) {
-		owner.forEach(function (match) {
-			const matchList = match.matches;
-			user.find({
-				name: userMatch
-			}).lean().exec(function (error, UID) {
-				UID.forEach(function (record) {
-					const matchId = record._id;
-					if (matchList.includes(matchId)) {
-						console.log("Already matched!");
-					} else {
-						user.findByIdAndUpdate(match._id, {
-							"$push": {
-								"matches": matchId
-							}
-						}, {
-							"new": true,
-							"upsert": true
-						},
-						function (err, logMatches) {
-							if (err) throw err;
-						}
-						);
-						console.log("Successfull match");
-					}
-				});
-			});
-			const matchedUser = match.matches;
-			res.render("matchList", {
-				matchedUser: matchedUser,
-			});
-		});
+	res.render("matchList", {
+		matches: req.params.matches,
 	});
 };
+
+//todo view matches in list with names (and img)
+//todo allow user to remove person from matches
+
 
 
 module.exports = {
