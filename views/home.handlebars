@@ -1,10 +1,16 @@
 <h2>dit is de home</h2>
 
 
+<main>
+    <p>Hey {{person}}!</p>
 
-<p>Hey {{name}}!</p>
-
-<p>Are you ready to </p>
-<a href="/match/{{name}}" >
-    <button>Match</button>
-</a>
+    <p>Are you ready to </p>
+    <a href="/match/{{name}}">
+        <button>Match</button>
+    </a>
+    <section class="match-list">
+        {{#each matches}}
+            <li>{{> matchedUser name=this.name favShows=this.favShows}}</li>
+        {{/each}}
+    </section>
+</main>
