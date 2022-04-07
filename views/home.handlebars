@@ -1,16 +1,16 @@
-<h2>dit is de home</h2>
-
-
-<main>
-    <p>Hey {{person}}!</p>
-
-    <p>Are you ready to </p>
-    <a href="/match/{{name}}">
-        <button>Match</button>
-    </a>
-    <section class="match-list">
+<main class="home-l-grid">
+    <section class="home-l-userContainer">
+        <p>{{person}}!</p>
+        <p>Are you ready to </p>
+        <a href="/match/{{person}}">
+            <button>Match</button>
+        </a>
+    </section>
+    <section class="home-l-matchList">
+        <ul class="matchList-c-list">
         {{#each matches}}
-            <li>{{> matchedUser name=this.name favShows=this.favShows}}</li>
+            <li class="matchList-c-user">{{> matchedUser name=this.name favShows=this.favShows}}</li>
         {{/each}}
+        </ul>
     </section>
 </main>

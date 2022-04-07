@@ -1,24 +1,24 @@
 const {
 	user,
 	tvshow
-} = require("../models");
+} = require('../models');
 const {
 	exists
-} = require("../models/user");
-const match = require("./match");
+} = require('../models/user');
+const match = require('./match');
 
 const matches = async (req, res) => {
 
-	const appUser = await user.find({name: req.params.userId})
+	const appUser = await user.find({name: req.params.userId});
 	const matchedPerson = await user.find({name: req.body.goodMatch});
 	const addToMatches = await user.findOneAndUpdate({name: req.params.userId}, {
 		$addToSet: {
 			matches: matchedPerson
 		}}).lean().exec();
-//$addToSet will add the matched person's ObjectID to the "matches" list of the app User if it does not already exist in there.
-		console.log(req.body)
+	//$addToSet will add the matched person's ObjectID to the "matches" list of the app User if it does not already exist in there.
+	console.log(req.body);
 
-	res.render("matchList", {
+	res.render('matchList', {
 		matches: req.params.matches,
 	});
 };

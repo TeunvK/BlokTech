@@ -1,4 +1,4 @@
-const { user } = require("../models");
+const { user } = require('../models');
 
 
 const home = async (req, res) => {
@@ -7,23 +7,23 @@ const home = async (req, res) => {
 	// let matches = appUser.matches;
 
 
-	const matchList = await user.findOne({name: person}).populate("matches").lean();
+	const matchList = await user.findOne({name: person}).populate('matches').lean();
 	const matches = matchList.matches;
 	// .then(p=>console.log(p.matches))
 	// .catch(error=>console.log(error));
 
-	console.log(matches)
-			res.render("home", {
-				person: person,
-				matches: matches,
-			});
-		// });
-		};
+	console.log(matches);
+	res.render('home', {
+		person: person,
+		matches: matches,
+	});
+	// });
+};
 
 
 const matchList = async (req, res) =>{
 
-}
+};
 
 module.exports = {
 	home: home

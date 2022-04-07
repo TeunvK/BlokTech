@@ -1,0 +1,43 @@
+.home-l-grid{
+    display: grid;
+    grid-template-rows: [user] 20em [matchlist] auto;
+    grid-template-columns: 1fr minmax(10em, 90vw) 1fr;
+
+}
+
+.home-l-userContainer{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: center;
+    text-align: center;
+}
+
+
+
+.home-l-matchList{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.matchList-c-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.matchList-c-user{
+    margin: 1rem;
+    max-width: 33%; 
+}
+
+.matchList-user-c-showList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    li{
+        font-size: 0.8em;
+        max-width: 30%;
+        margin: 0.2rem;
+    }  
+}
