@@ -2,7 +2,9 @@
     <h2>{{name}}</h2>
     <ul class="matchList-user-c-showList">
         {{#each favShows}}
-            <li class="matchList-user-c-show">{{this}}</li>
+            <li class="matchList-user-c-show">
+                <img src="https://static.episodate.com/images/tv-show/thumbnail/{{this}}.jpg">
+            </li>
         {{/each}}
     </ul>
 </div>
