@@ -1,9 +1,9 @@
-console.log("test "+req.query);
+console.log("test");
 
 
 async function getTvShows(){
 
-	const res = await fetch("https://www.episodate.com/api/show-details?q=:");
+	const res = await fetch("https://www.episodate.com/api/}");
 	console.log(res);
 }
 
