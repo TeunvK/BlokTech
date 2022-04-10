@@ -12,7 +12,6 @@ const home = async (req, res) => {
 	// .then(p=>console.log(p.matches))
 	// .catch(error=>console.log(error));
 
-	console.log(matches);
 	res.render('home', {
 		person: person,
 		matches: matches,

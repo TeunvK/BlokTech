@@ -257,6 +257,10 @@ nav .home-button {
   justify-content: center;
   grid-column: 2/3;
   grid-row: 2/3;
+  width: 100%;
+}
+.tvShowResults form {
+  width: 100%;
 }
 .tvShowResults .resultList-c-title {
   flex-basis: 100%;
@@ -272,9 +276,6 @@ nav .home-button {
 #showResultList li {
   width: 30%;
   margin: 1%;
-}
-#showResultList li form {
-  height: 100%;
 }
 
 img:hover {
@@ -313,6 +314,7 @@ label img {
   height: 100%;
   object-fit: cover;
   transition-duration: 0.2s;
+  min-height: 10rem;
 }
 
 :checked + label:before {
@@ -327,6 +329,23 @@ label img {
   transform: scale(0.9);
   /* box-shadow: 0 0 5px #333; */
   z-index: -1;
+}
+
+.selectShows {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 1.5rem 3rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  position: fixed;
+  border-radius: 1.5rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 90vh;
 }
 
 /*# sourceMappingURL=main.css.map */

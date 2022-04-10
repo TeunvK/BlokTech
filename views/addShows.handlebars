@@ -4,93 +4,72 @@
         <input id="tvShow" type="text" placeholder="Search...">
     </section>
     <section class="tvShowResults">
+           <form method="POST" id="showResultsForm" action="{{userName}}">
         <ul id="showResultList">
             <h2 class="resultList-c-title">Or pick one of these popular shows</h2>
             <li>
-                <form method="POST">
-                    <input type="checkbox" id="the-flash" class="img-checkbox" value="35624">
+                    <input type="checkbox" id="the-flash" class="img-checkbox" value="35624" name="showId">
                     <label for="the-flash"><img src="https://static.episodate.com/images/tv-show/thumbnail/35624.jpg"
                             alt"the-flash"></label>
-                </form>
             </li>
             <li>
-                <form method="POST">
-                    <input type="checkbox" id="game-of-thrones" class="img-checkbox" value="23455">
+                    <input type="checkbox" id="game-of-thrones" class="img-checkbox" value="23455" name="showId">
                     <label for="game-of-thrones"><img
                             src="https://static.episodate.com/images/tv-show/thumbnail/23455.jpg" alt"game-of-thrones"></label>
-                </form>
             </li>
             <li>
-                <form method="POST">
-                    <input type="checkbox" id="arrow" class="img-checkbox" value="29560">
+                    <input type="checkbox" id="arrow" class="img-checkbox" value="29560" name="showId">
                     <label for="arrow"><img src="https://static.episodate.com/images/tv-show/thumbnail/29560.jpg"
                             alt"arrow"></label>
-                </form>
             </li>
             <li>
-                <form method="POST">
-                    <input type="checkbox" id="lucifer" class="img-checkbox" value="43467">
+                    <input type="checkbox" id="lucifer" class="img-checkbox" value="43467" name="showId">
                     <label for="lucifer"><img src="https://static.episodate.com/images/tv-show/thumbnail/43467.jpg"
                             alt"lucifer"></label>
-                </form>
             </li>
             <li>
-                <form method="POST">
-                    <input type="checkbox" id="supergirl" class="img-checkbox" value="43234">
+                    <input type="checkbox" id="supergirl" class="img-checkbox" value="43234" name="showId">
                     <label for="supergirl"><img src="https://static.episodate.com/images/tv-show/thumbnail/43234.jpg"
                             alt"supergirl"></label>
-                </form>
             </li>
             <li>
-                <form method="POST">
-                    <input type="checkbox" id="dcs-legends-of-tomorrow" class="img-checkbox" value="46692">
+                    <input type="checkbox" id="dcs-legends-of-tomorrow" class="img-checkbox" value="46692" name="showId">
                     <label for="dcs-legends-of-tomorrow"><img src="https://static.episodate.com/images/tv-show/thumbnail/46692.jpg"
                             alt"dcs-legends-of-tomorrow"></label>
-                </form>
             </li>
             <li>
-                <form method="POST">
-                    <input type="checkbox" id="the-walking-dead" class="img-checkbox" value="24010">
+                    <input type="checkbox" id="the-walking-dead" class="img-checkbox" value="24010" name="showId">
                     <label for="the-walking-dead"><img src="https://static.episodate.com/images/tv-show/thumbnail/24010.jpg"
                             alt"the-walking-dead"></label>
-                </form>
             </li>
             <li>
-                <form method="POST">
-                    <input type="checkbox" id="montauk" class="img-checkbox" value="46778">
+                    <input type="checkbox" id="montauk" class="img-checkbox" value="46778" name="showId">
                     <label for="montauk"><img src="https://static.episodate.com/images/tv-show/thumbnail/46778.jpg"
                             alt"montauk"></label>
-                </form>
             </li>
             <li>
-                <form method="POST">
-                    <input type="checkbox" id="dragon-ball-super" class="img-checkbox" value="47145">
+                    <input type="checkbox" id="dragon-ball-super" class="img-checkbox" value="47145" name="showId">
                     <label for="dragon-ball-super"><img src="https://static.episodate.com/images/tv-show/thumbnail/47145.jpg"
                             alt"dragon-ball-super"></label>
-                </form>
             </li>
              <li>
-                <form method="POST">
-                    <input type="checkbox" id="boku-no-hero-academia" class="img-checkbox" value="52439">
+                    <input type="checkbox" id="boku-no-hero-academia" class="img-checkbox" value="52439" name="showId">
                     <label for="boku-no-hero-academia"><img src="https://static.episodate.com/images/tv-show/thumbnail/52439.jpg"
                             alt"boku-no-hero-academia"></label>
-                </form>
             </li>
-             <li>
-                <form method="POST">
-                    <input type="checkbox" id="the-100" class="img-checkbox" value="33514">
+             <li>   
+                    <input type="checkbox" id="the-100" class="img-checkbox" value="33514" name="showId">
                     <label for="the-100"><img src="https://static.episodate.com/images/tv-show/thumbnail/33514.jpg"
                             alt"the-100"></label>
-                </form>
             </li>
              <li>
-                <form method="POST">
-                    <input type="checkbox" id="sherlock" class="img-checkbox" value="22410">
+                    <input type="checkbox" id="sherlock" class="img-checkbox" value="22410" name="showId">
                     <label for="sherlock"><img src="https://static.episodate.com/images/tv-show/thumbnail/22410.jpg"
                             alt"sherlock"></label>
-                </form>
             </li>
-
         </ul>
+               <button type="submit" id="showSelect-Btn" class="selectShows">Add shows</button>
+            </form>
+ 
     </section>
 </main>

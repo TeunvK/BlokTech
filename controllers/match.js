@@ -1,4 +1,4 @@
-const { user, tvshow } = require("../models");
+const { user } = require("../models");
 
 // async function getTvShows(){
 // 	const api = await fetch("https://www.episodate.com/api/show-details");
