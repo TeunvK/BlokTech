@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -227,6 +228,105 @@ nav .home-button {
 .match-buttons img {
   max-width: 5rem;
   margin: 0 4rem 0 4rem;
+}
+
+.addshow-l-grid {
+  display: grid;
+  grid-template-rows: [search] 20em [showresults] auto;
+  grid-template-columns: 1fr minmax(20em, 80vw) 1fr;
+}
+
+.searchBox {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  justify-self: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.searchBox input {
+  padding: 1rem;
+  border: solid 3px #EF233C;
+  border-radius: 2rem;
+  margin: 1rem;
+}
+
+.tvShowResults {
+  display: flex;
+  justify-content: center;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.tvShowResults .resultList-c-title {
+  flex-basis: 100%;
+  margin-bottom: 1rem;
+}
+
+#showResultList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#showResultList li {
+  width: 30%;
+  margin: 1%;
+}
+#showResultList li form {
+  height: 100%;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+input[type=checkbox][class=img-checkbox] {
+  display: none;
+}
+
+label {
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}
+
+label:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  border-radius: 50%;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+label img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition-duration: 0.2s;
+}
+
+:checked + label:before {
+  content: "✓";
+  background-color: #EF233C;
+  transform: scale(1);
+  z-index: 1;
+  top: 0;
+}
+
+:checked + label img {
+  transform: scale(0.9);
+  /* box-shadow: 0 0 5px #333; */
+  z-index: -1;
 }
 
 /*# sourceMappingURL=main.css.map */
