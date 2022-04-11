@@ -241,7 +241,7 @@ hr {
 }
 
 /* The Modal Close Button (x) */
-.close {
+.closePopup {
   position: absolute;
   right: 35px;
   top: 15px;
@@ -250,8 +250,8 @@ hr {
   color: #f1f1f1;
 }
 
-.close:hover,
-.close:focus {
+.closePopup:hover,
+.closePopup:focus {
   color: #f44336;
   cursor: pointer;
 }

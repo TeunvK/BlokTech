@@ -1,6 +1,6 @@
 <div class="matched-user">
     <h2>{{name}}</h2>
-    <button onclick="document.getElementById('removePopup').style.display='block'">❌</button>
+    <button method'post' type="button" class="deleteBtn" id={{name}}>❌</button>
     <ul class="matchList-user-c-showList">
         {{#each favShows}}
             <li class="matchList-user-c-show">
@@ -8,18 +8,8 @@
             </li>
         {{/each}}
     </ul>
+    {{> unmatchPopup name=this.name person=person}}
 </div>
-<div id="removePopup" class="confirmUnmatch">
-  <span onclick="document.getElementById('removePopup').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form class="removePopup-content" action="/removeUser">
-    <div class="popupContainer">
-      <h1>Unmatch user</h1>
-      <p>Are you sure you want unmatch with {{name}}?</p>
 
-      <div class="clearfix">
-        <button type="button" class="cancelbtn">Cancel</button>
-        <button type="button" class="deletebtn">Delete</button>
-      </div>
-    </div>
-  </form>
-</div>
+      
+

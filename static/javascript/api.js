@@ -5,7 +5,7 @@ let showList = document.querySelector('#showResultList');
 
 async function getTvShows(query){
 	try{
-        //fetch api and turn it into json
+		//fetch api and turn it into json
 		const res = await fetch(`https://www.episodate.com/api/search?q=${query}`);
 		const data = await res.json();
 		const result = await data.tv_shows.map(test => test);
@@ -28,7 +28,7 @@ function generateShowList(result){
 		inputType.setAttribute('id', result.permalink);
 		inputType.setAttribute('class', 'img-checkbox');
 		inputType.setAttribute('value', result.id);
-		inputType.setAttribute('name', 'showId')
+		inputType.setAttribute('name', 'showId');
 
 		const labelContainer = document.createElement('label');
 		labelContainer.setAttribute('for', result.permalink);
@@ -50,7 +50,7 @@ let searchTimeout = 0;
 
 window.onload = () => {
 	const searchTerm = document.getElementById('tvShow');
-	searchTerm.onkeyup = (event) => {   //check for keyup event
+	searchTerm.onkeyup = () => {   //check for keyup event
 
 		clearTimeout(searchTimeout);
 		if(searchTerm.value.trim().length === 0){   //if searchbar is empty, don't request for data

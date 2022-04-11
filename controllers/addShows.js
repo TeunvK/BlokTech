@@ -9,7 +9,7 @@ const searchShow = async (req, res) => {
 
 const addShows = async (req, res) => {
 	const showIds = req.body.showId;
-	const addToMatches = await user.findOneAndUpdate({name: req.params.userId}, {
+	await user.findOneAndUpdate({name: req.params.userId}, {
 		$addToSet: {
 			favShows: showIds
 		}}).lean().exec();

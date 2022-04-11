@@ -19,7 +19,7 @@
     <section class="home-l-matchList">
         <ul class="matchList-c-list">
         {{#each matches}}
-            <li class="matchList-c-user">{{> matchedUser name=this.name favShows=this.favShows}}</li>
+            <li class="matchList-c-user">{{> matchedUser person=person name=this.name favShows=this.favShows}}</li>
         {{/each}}
         </ul>
     </section>

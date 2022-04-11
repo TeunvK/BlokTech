@@ -1,0 +1,14 @@
+<div id="unmatch{{name}}" class="confirmUnmatch">
+  <span class="closePopup" title="Close">❌</span>
+  <form class="removePopup-content"  action="unmatchUser/{{name}}">
+    <div class="popupContainer">
+      <h1>Unmatch user</h1>
+      <p>Are you sure you want unmatch with {{name}}?</p>
+
+      <div class="clearfix">
+        <a id="cancelbtn" href="/home/{{person}}" class="cancelbtn"> Cancel </a>
+        <button type="submit" id="deletebtn" class="deletebtn">Delete</button>
+      </div>
+    </div>
+  </form>
+</div>

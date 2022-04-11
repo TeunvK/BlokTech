@@ -14,6 +14,14 @@ const home = async (req, res) => {
 	});
 };
 
+
+
+const unmatchUser = async (req, res) => {
+	console.log(user.findOne({name: req.params.userId}));
+	res.redirect('home');
+};
+
 module.exports = {
-	home: home
+	home: home,
+	unmatchUser: unmatchUser,
 };
