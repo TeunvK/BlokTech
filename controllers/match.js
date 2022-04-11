@@ -1,10 +1,4 @@
-const { user } = require("../models");
-
-// async function getTvShows(){
-// 	const api = await fetch("https://www.episodate.com/api/show-details");
-// 	console.log(api);
-// }
-
+const { user } = require('../models');
 
 const match = async (req, res) => {
 	user.count().exec(function (err, count) {
@@ -17,9 +11,8 @@ const match = async (req, res) => {
 				const name = result.name;
 				const age = result.age;
 				const about = result.about;
-				console.log(result.favShows);
 
-				res.render("match", {
+				res.render('match', {
 					userName: req.params.userId,
 					name: name,
 					age: age,
@@ -29,11 +22,7 @@ const match = async (req, res) => {
 			});
 	});
 };
-const getMatch = (req, res) => {
-};
-
 
 module.exports = {
 	match: match,
-	getMatch: getMatch
 };

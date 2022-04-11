@@ -8,6 +8,13 @@
         <a href="/addShows/{{person}}">
             <button>Add your favorite shows to your list</button>
         </a>
+            <ul class="home-user-c-showList">
+                {{#each favShows}}
+                    <li class="home-user-c-show">
+                        <img src="https://static.episodate.com/images/tv-show/thumbnail/{{this}}.jpg">
+                    </li>
+                {{/each}}
+        </ul>
     </section>
     <section class="home-l-matchList">
         <ul class="matchList-c-list">

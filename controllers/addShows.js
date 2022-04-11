@@ -1,21 +1,15 @@
 const { user } = require('../models');
 
 
-
-
 const searchShow = async (req, res) => {
-
 	res.render('addShows', {
-
 	});
 };
 
 
 const addShows = async (req, res) => {
-    console.log(req.body.showId)
-    const showIds = req.body.showId
-
-    const addToMatches = await user.findOneAndUpdate({name: req.params.userId}, {
+	const showIds = req.body.showId;
+	const addToMatches = await user.findOneAndUpdate({name: req.params.userId}, {
 		$addToSet: {
 			favShows: showIds
 		}}).lean().exec();

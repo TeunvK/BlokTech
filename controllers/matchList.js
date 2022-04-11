@@ -1,11 +1,5 @@
-const {
-	user,
-	tvshow
-} = require('../models');
-const {
-	exists
-} = require('../models/user');
-const match = require('./match');
+const {	user } = require('../models');
+
 
 const matches = async (req, res) => {
 
@@ -16,16 +10,9 @@ const matches = async (req, res) => {
 			matches: matchedPerson
 		}}).lean().exec();
 	//$addToSet will add the matched person's ObjectID to the "matches" list of the app User if it does not already exist in there.
-	console.log(req.body);
 
-	res.render('matchList', {
-		matches: req.params.matches,
-	});
+	res.redirect(`../home/${req.params.userId}`);
 };
-
-//todo view matches in list with names (and img)
-//todo allow user to remove person from matches
-
 
 
 module.exports = {
