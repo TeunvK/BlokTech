@@ -18,8 +18,16 @@ h3 {
     font-size: 1.5em;
 }
 
+.font-bolder{
+    font-weight: 700;
+}
+
 .font--blue{
     color: $primary-blue;
+}
+
+.font--blue-dark{
+    color: $primary-blue-dark;
 }
 
 .font--red{

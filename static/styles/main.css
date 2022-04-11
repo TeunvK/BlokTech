@@ -96,8 +96,16 @@ h3 {
   font-size: 1.5em;
 }
 
+.font-bolder {
+  font-weight: 700;
+}
+
 .font--blue {
   color: #64C2EC;
+}
+
+.font--blue-dark {
+  color: #13749f;
 }
 
 .font--red {
@@ -241,6 +249,12 @@ nav .home-button {
   grid-row: 2/3;
 }
 
+.home-l-userContainer {
+  padding: 1rem;
+  background-color: #BAE1F2;
+  border-radius: 1rem;
+}
+
 .user-container {
   width: 70%;
   margin-left: auto;
@@ -328,6 +342,9 @@ nav .home-button {
   background-color: #BAE1F2;
   padding: 2rem;
   border-radius: 2rem;
+}
+.matched-user :first-child {
+  margin-bottom: 1rem;
 }
 
 .inlogcontainer {
