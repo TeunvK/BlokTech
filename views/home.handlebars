@@ -17,10 +17,14 @@
         </ul>
     </section>
     <section class="home-l-matchList">
+        <form method="post" action="unmatchUser/{{person}}">
         <ul class="matchList-c-list">
         {{#each matches}}
-            <li class="matchList-c-user">{{> matchedUser person=person name=this.name favShows=this.favShows}}</li>
+            <li class="matchList-c-user">{{> matchedUser name=this.name favShows=this.favShows}}</li>
         {{/each}}
         </ul>
+                    {{> unmatchPopup name=this.name}}
+        </form>
+
     </section>
 </main>

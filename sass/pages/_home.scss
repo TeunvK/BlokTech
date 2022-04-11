@@ -106,7 +106,8 @@
     text-align: center;
   }
   
-  /* The Modal (background) */
+  
+  /* Modal Content/Box */
   .confirmUnmatch {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -118,10 +119,6 @@
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(71, 78, 93, 0.8);
     padding-top: 50px;
-  }
-  
-  /* Modal Content/Box */
-  .removePopup-content {
     background-color: #fefefe;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;

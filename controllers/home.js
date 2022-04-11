@@ -6,7 +6,6 @@ const home = async (req, res) => {
 	let person = appUser.name;
 
 	const matchList = await user.findOne({name: person}).populate('matches').lean();
-
 	res.render('home', {
 		person: person,
 		favShows: matchList.favShows,
@@ -15,10 +14,15 @@ const home = async (req, res) => {
 };
 
 
-
 const unmatchUser = async (req, res) => {
-	console.log(user.findOne({name: req.params.userId}));
-	res.redirect('home');
+	
+	const unmatchPerson = await user.findOne({name: req.body.unmatch});
+	const appUser = await user.findOneAndUpdate({name: req.params.userId}, {
+		$pull: {
+			matches: unmatchPerson.id
+		}}).lean().exec();
+//$pull will remove from an existing (specified) array
+	res.redirect(`../../home/${req.params.userId}`);
 };
 
 module.exports = {
