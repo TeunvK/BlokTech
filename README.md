@@ -36,14 +36,18 @@ And go to: [localhost:3000](localhost:3000)
 ## Adding tv-shows
   If you log in you'll see something like this screen:
 
-  # IMG
-  if you click on add your favorite shows to your list, you find yourself on this page
-# IMG
+![image](https://user-images.githubusercontent.com/60609760/162832446-8461bff5-8518-4a9e-a4f1-56fd425f59f2.png)  
+    
+if you click on add your favorite shows to your list, you find yourself on this page  
+![image](https://user-images.githubusercontent.com/60609760/162832844-7eb6af42-b609-4807-82fd-a410c58546a2.png)  
 here you can add one of the most popular tv shows (according to the API I used) or search for a show yourself.
 After you've added 1 or multiple shows, click on "add shows" and the shows will get added to your list and will be displayed on your profile page.
 
 ## Matching with other users
-Clicking on "Match" will send you to the match page. Here you will get matched with a random user from the database (which aren't that many). You can then like or dislike the user you got matched with, if you click on dislike you will get matched with a new user. If you press like you get sent back to your home page, with the user added to your list of matches.
+Clicking on "Match" will send you to the match page. Here you will get matched with a random user from the database (which aren't that many). You can then like or dislike the user you got matched with, if you click on dislike you will get matched with a new user. If you press like you get sent back to your home page, with the user added to your list of matches.  
+![image](https://user-images.githubusercontent.com/60609760/162838149-49f5f050-9aa1-42cd-a3d2-0e86318cf633.png)
+
 
 ## Unmatching with users
-On the home page you can view the users you've matched with, and you can also unmatch with them by pressing the little red X in the top right of the user. It will prompt a popup that asks if you really want to unmatch. If you click delete, the user will get removed from your matches.
+On the home page you can view the users you've matched with, and you can also unmatch with them by pressing the little red X in the top right of the user. It will prompt a popup that asks if you really want to unmatch. If you click delete, the user will get removed from your matches.  
+![image](https://user-images.githubusercontent.com/60609760/162838203-df46fc98-22bb-4c52-ad37-131e7f00c6a2.png)
