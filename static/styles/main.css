@@ -100,6 +100,10 @@ h3 {
   font-weight: 700;
 }
 
+.font-thinner {
+  font-weight: 100;
+}
+
 .font--blue {
   color: #64C2EC;
 }
@@ -356,34 +360,24 @@ nav .home-button {
   left: 0;
   right: 0;
   margin: auto;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
+  top: 10rem;
 }
 .profile-container .person {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 .profile-container .person ul {
   margin-left: 0.8rem;
 }
 .profile-container .person ul li {
-  font-weight: 600;
   padding: 0.2rem;
-}
-.profile-container .person ul .person-name {
-  font-size: 2em;
-}
-.profile-container .person ul .person-age {
-  font-size: 1.2em;
-}
-.profile-container .person ul .person-about {
-  font-weight: 400;
 }
 .profile-container .person .placeholder-person {
   max-width: 20em;
   border-radius: 3em;
-  border: 0.2em solid #8DAABA;
+  border: 0.2em solid #1d2930;
 }
 .profile-container .shows h2:first-child {
   margin-top: 0.8em;
@@ -392,6 +386,8 @@ nav .home-button {
 .profile-container .shows .show-list {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  width: 80%;
 }
 .profile-container .shows .show-list li {
   width: 30%;
@@ -412,7 +408,10 @@ nav .home-button {
 }
 .match-buttons img {
   max-width: 5rem;
-  margin: 0 4rem 0 4rem;
+  margin: 0 2rem 0 2rem;
+}
+.match-buttons button {
+  left: 2.5rem;
 }
 
 .addshow-l-grid {
@@ -504,7 +503,7 @@ label img {
 
 :checked + label:before {
   content: "✓";
-  background-color: #FFFFFF;
+  background-color: #F74356;
   transform: scale(1);
   z-index: 1;
   top: 0;

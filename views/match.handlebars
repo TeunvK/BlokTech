@@ -3,11 +3,11 @@
   
     <div class="profile-container">
         <section class="person">
-            <img src="/images/matching/placeholder-person.png" class="placeholder-person">
+            <img src="/images/matching/leoPlaceholder.png" class="placeholder-person">
             <ul>
-                <li class="person-name">{{name}}</li>
-                <li class="person-age">{{age}}</li>
-                <li class="person-about">{{about}}</li>
+                <li class="person-name font--blue-dark"><h1>{{name}}</h1></li>
+                <li class="person-age"><h2>{{age}}</h2></li>
+                <li class="person-about .font--thinner"><p>{{about}}</p></li>
             </ul>
         </section>
         <section class="shows">
@@ -22,10 +22,10 @@
     </div>
     <div class="match-buttons">
         <form action="/match/{{userName}}" method="GET">
-            <button type="submit" name="badMatch" value="{{name}}" class="btn"><img src="/images/icons/x-mark.png" alt="x-icon"></button>
+            <button type="submit" name="badMatch" value="{{name}}" class="btn btn--blue"><img src="/images/icons/x-mark.png" alt="x-icon"></button>
         </form>
         <form action="/matchList/{{userName}}" method="POST">
-            <button type="submit" name="goodMatch" value="{{name}}" class="btn"><img src="/images/icons/check-mark.png" alt="checkmark-icon"></button>
+            <button type="submit" name="goodMatch" value="{{name}}" class="btn btn--blue"><img src="/images/icons/check-mark.png" alt="checkmark-icon"></button>
         </form>
     </div>
 </main>
