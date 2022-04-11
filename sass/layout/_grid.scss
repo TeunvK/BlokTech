@@ -1,0 +1,19 @@
+.home-l-grid{
+    display: grid;
+    grid-template-rows: [user] 1fr [matchlist] auto;
+    grid-template-columns: 1fr minmax(10em, 90vw) 1fr;
+
+}
+
+.home-l-userContainer{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin-bottom: 2rem;
+}
+
+
+
+.home-l-matchList{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}

@@ -1,4 +1,4 @@
-// //index.js
+//index.js
 
 let deleteBtn = Array.from(document.getElementsByClassName('deleteBtn'));
 let closeBtn = Array.from(document.getElementsByClassName('closePopup'));

@@ -11,14 +11,18 @@ const match = async (req, res) => {
 				const name = result.name;
 				const age = result.age;
 				const about = result.about;
-
-				res.render('match', {
-					userName: req.params.userId,
-					name: name,
-					age: age,
-					about: about,
-					shows: result.favShows
-				});
+				// Prevent users matching with theirselves
+				if(result.name == req.params.userId){
+					res.redirect(`../match/${req.params.userId}`);
+				} else {
+					res.render('match', {
+						userName: req.params.userId,
+						name: name,
+						age: age,
+						about: about,
+						shows: result.favShows
+					});
+				}
 			});
 	});
 };

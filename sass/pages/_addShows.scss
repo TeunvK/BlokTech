@@ -16,7 +16,7 @@
 
         input{
             padding: 1rem;
-            border: solid 3px $secondary-color;
+            border: solid 3px $primary-gray;
             border-radius: 2rem;
             margin: 1rem;
 
@@ -99,7 +99,7 @@ label img {
 
 :checked + label:before {
   content: "✓";
-  background-color: $secondary-color;
+  background-color: $background-color;
   transform: scale(1);
   z-index: 1;
   top: 0;

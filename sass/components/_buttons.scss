@@ -1,0 +1,16 @@
+.deletebtn {
+    width: 50%;
+    background-color: $primary-red;
+    margin: 0.5rem;
+    padding: 1.5rem;
+    font-size: larger;
+    font-weight: 700;
+    color: $background-color;
+    border: none;
+  }
+
+  .deletebtn:hover,
+  .deletebtn:focus {
+    background-color: $secondary-red;
+    cursor: pointer;
+  }

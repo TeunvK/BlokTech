@@ -17,11 +17,11 @@ const home = async (req, res) => {
 const unmatchUser = async (req, res) => {
 	
 	const unmatchPerson = await user.findOne({name: req.body.unmatch});
-	const appUser = await user.findOneAndUpdate({name: req.params.userId}, {
+	await user.findOneAndUpdate({name: req.params.userId}, {
 		$pull: {
 			matches: unmatchPerson.id
 		}}).lean().exec();
-//$pull will remove from an existing (specified) array
+	//$pull will remove a (specified) value from an existing (specified) array
 	res.redirect(`../../home/${req.params.userId}`);
 };
 
