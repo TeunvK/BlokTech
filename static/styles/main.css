@@ -249,12 +249,6 @@ nav .home-button {
   grid-row: 2/3;
 }
 
-.home-l-userContainer {
-  padding: 1rem;
-  background-color: #BAE1F2;
-  border-radius: 1rem;
-}
-
 .user-container {
   width: 70%;
   margin-left: auto;
