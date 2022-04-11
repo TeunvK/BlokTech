@@ -1,13 +1,10 @@
 <main class="home-l-grid">
     <section class="home-l-userContainer">
-        <p>{{person}}!</p>
-        <p>Are you ready to </p>
-        <a href="/match/{{person}}">
-            <button>Match</button>
-        </a>
-        <a href="/addShows/{{person}}">
-            <button>Add your favorite shows to your list</button>
-        </a>
+        <section class="user-container">
+            <h1 class="myprofile-header font--blue">My profile:</h1> 
+            <h1>{{person}}!</h1>
+            <p>{{about}}</p>
+        </section>
             <ul class="home-user-c-showList">
                 {{#each favShows}}
                     <li class="home-user-c-show">
@@ -15,8 +12,17 @@
                     </li>
                 {{/each}}
         </ul>
+        <div class="home-user-c-btn">
+        <a href="/match/{{person}}">
+            <button class="btn btn--blue btn--wide">Match</button>
+        </a>
+        <a href="/addShows/{{person}}">
+            <button class="btn btn--blue btn--wide">Add your favorite shows to your list</button>
+        </a>
+        </div>
     </section>
     <section class="home-l-matchList">
+        <h1 class="mymatches-header font--blue">My matches:</h1> 
         <form method="post" action="unmatchUser/{{person}}">
         <ul class="matchList-c-list">
         {{#each matches}}
@@ -25,6 +31,5 @@
         </ul>
                     {{> unmatchPopup name=this.name}}
         </form>
-
     </section>
 </main>

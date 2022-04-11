@@ -8,6 +8,7 @@ const home = async (req, res) => {
 	const matchList = await user.findOne({name: person}).populate('matches').lean();
 	res.render('home', {
 		person: person,
+		about: appUser.about,
 		favShows: matchList.favShows,
 		matches: matchList.matches,
 	});

@@ -1,0 +1,40 @@
+ 
+  //Modal container
+  .confirmUnmatch {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(99, 103, 110, 0.8);  
+  }
+  
+  
+  // The Modal Close Button (x)
+  .closePopup {
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    color: $background-color;
+    font-size: 5rem;
+    font-weight: 700;
+    padding: 1rem;
+
+    &:hover, &:focus{
+        color: $primary-red;
+        cursor: pointer;
+    }
+  }
+
+  //White popup
+  .popupContainer {
+    padding: 3rem;
+    text-align: center;
+    background-color: #fefefe;
+    margin: 1rem auto 1rem auto;
+    margin-top:  8rem;
+    width: 70%;
+  }

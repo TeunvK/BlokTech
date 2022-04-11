@@ -2,7 +2,7 @@
     <h2>{{name}}</h2>
     {{!-- <input type="text" name="unmatch" value='{{name}}' id="unmatch{{name}}Input" hidden> --}}
     <input type="checkbox" name="unmatch" value='{{name}}' class="deleteBtn" id='unmatchBtn{{name}}' hidden>
-    <label for='unmatchBtn{{name}}'>❌</label>
+    <label for='unmatchBtn{{name}}' class="x-btn btn--small btn--float-right" title="Unmatch">❌</label>
     <ul class="matchList-user-c-showList">
         {{#each favShows}}
             <li class="matchList-user-c-show">

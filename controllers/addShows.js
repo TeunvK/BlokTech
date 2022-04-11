@@ -2,7 +2,9 @@ const { user } = require('../models');
 
 
 const searchShow = async (req, res) => {
+
 	res.render('addShows', {
+		userName: req.params.userId,
 	});
 };
 

@@ -1,16 +1,61 @@
-.deletebtn {
-    width: 50%;
-    background-color: $primary-red;
+  .btn{
+    background-color: $background-color;
+    color: $border-color;
+    border-radius: 5px;
+    display: inline-block;
     margin: 0.5rem;
-    padding: 1.5rem;
-    font-size: larger;
+    font-size: 1.2em;
     font-weight: 700;
-    color: $background-color;
-    border: none;
+    padding: 1.5rem;
+    white-space: nowrap;
+    &:hover,
+    &:focus {
+        background-color: $primary-gray;
+        cursor: pointer;
+  }
   }
 
-  .deletebtn:hover,
-  .deletebtn:focus {
-    background-color: $secondary-red;
-    cursor: pointer;
+  .btn--wide{
+    width: 40%;
   }
+  .btn--small{
+      width: 10%;
+  }
+
+  .btn--center-bottom{
+    position: fixed;
+    border-radius: 1.5rem;
+    @include center-horizontal;
+    top: 90vh;
+  }
+
+  .btn--blue{
+    color: $background-color;
+    background-color: $primary-blue;
+    &:hover,
+    &:focus {
+        background-color: $primary-blue-dark;
+    }
+  }
+
+  .btn--red{
+    color: $background-color;
+    background-color: $primary-red;
+    &:hover,
+    &:focus {
+        background-color: $primary-red-dark;
+    }
+  }
+
+ .btn--green{
+    color: $background-color;
+    background-color: $primary-green;
+    &:hover,
+    &:focus {
+        background-color: $primary-green-dark;
+    }
+ }
+
+ .btn--float-right{
+     float: right;
+ }

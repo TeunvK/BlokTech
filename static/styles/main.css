@@ -53,8 +53,8 @@ table {
 }
 
 body {
-  background-color: #FFFAFA;
-  color: rgb(235, 41, 41);
+  background-color: #FFFFFF;
+  color: #F74356;
 }
 
 .inlogcontainer {
@@ -82,21 +82,122 @@ body {
   font-family: Montserrat, sans-serif;
 }
 
-.deletebtn {
-  width: 50%;
-  background-color: #F74356;
-  margin: 0.5rem;
-  padding: 1.5rem;
-  font-size: larger;
+h1 {
+  font-size: 2em;
   font-weight: 700;
-  color: #FFFFFF;
-  border: none;
 }
 
-.deletebtn:hover,
-.deletebtn:focus {
-  background-color: #ab0719;
+h2 {
+  font-size: 1.75em;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+.font--blue {
+  color: #64C2EC;
+}
+
+.font--red {
+  color: #F74356;
+}
+
+.btn {
+  background-color: #FFFFFF;
+  color: #1d2930;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0.5rem;
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 1.5rem;
+  white-space: nowrap;
+}
+.btn:hover, .btn:focus {
+  background-color: #8DAABA;
   cursor: pointer;
+}
+
+.btn--wide {
+  width: 40%;
+}
+
+.btn--small {
+  width: 10%;
+}
+
+.btn--center-bottom {
+  position: fixed;
+  border-radius: 1.5rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 90vh;
+}
+
+.btn--blue {
+  color: #FFFFFF;
+  background-color: #64C2EC;
+}
+.btn--blue:hover, .btn--blue:focus {
+  background-color: #13749f;
+}
+
+.btn--red {
+  color: #FFFFFF;
+  background-color: #F74356;
+}
+.btn--red:hover, .btn--red:focus {
+  background-color: #ab0719;
+}
+
+.btn--green {
+  color: #FFFFFF;
+  background-color: #4CAF50;
+}
+.btn--green:hover, .btn--green:focus {
+  background-color: #275929;
+}
+
+.btn--float-right {
+  float: right;
+}
+
+.confirmUnmatch {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(99, 103, 110, 0.8);
+}
+
+.closePopup {
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+  color: #FFFFFF;
+  font-size: 5rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+.closePopup:hover, .closePopup:focus {
+  color: #F74356;
+  cursor: pointer;
+}
+
+.popupContainer {
+  padding: 3rem;
+  text-align: center;
+  background-color: #fefefe;
+  margin: 1rem auto 1rem auto;
+  margin-top: 8rem;
+  width: 70%;
 }
 
 .logo {
@@ -140,6 +241,16 @@ nav .home-button {
   grid-row: 2/3;
 }
 
+.user-container {
+  width: 70%;
+  margin-left: auto;
+  margin: 4rem auto 1rem auto;
+  padding-bottom: 4rem;
+}
+.user-container .myprofile-header {
+  margin-bottom: 2rem;
+}
+
 .home-user-c-showList {
   display: flex;
   flex-direction: row;
@@ -161,7 +272,17 @@ nav .home-button {
   height: 100%;
   object-fit: cover;
   border-radius: 0.2em;
-  border: 2px solid #8DAABA;
+  border: 2px solid #1d2930;
+}
+
+.home-user-c-btn {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.home-l-matchList .mymatches-header {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 
 .matchList-c-list {
@@ -186,7 +307,7 @@ nav .home-button {
 .matchList-user-c-showList li {
   font-size: 0.8em;
   width: 30%;
-  max-width: 20rem;
+  max-width: 8rem;
   min-width: 5rem;
   margin: 0.2rem;
 }
@@ -195,55 +316,18 @@ nav .home-button {
   height: 100%;
   object-fit: cover;
   border-radius: 0.2em;
-  border: 2px solid #8DAABA;
+  border: 2px solid #1d2930;
 }
 
-/* Add padding and center-align text to the container */
-.popupContainer {
-  padding: 3rem;
-  text-align: center;
-  background-color: #fefefe;
-  margin: 5% auto 15% auto;
-  /* 5% from the top, 15% from the bottom and centered */
-  margin-top: 8rem;
-  width: 70%;
-  /* Could be more or less, depending on screen size */
+.x-btn {
+  top: -1rem;
+  right: 0;
 }
 
-/* Modal Content/Box */
-.confirmUnmatch {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: rgba(99, 103, 110, 0.8);
-}
-
-/* The Modal Close Button (x) */
-.closePopup {
-  position: absolute;
-  right: 2rem;
-  top: 1rem;
-  color: #FFFFFF;
-  font-size: 5rem;
-  font-weight: 700;
-  padding: 1rem;
-}
-
-.closePopup:hover,
-.closePopup:focus {
-  color: #F74356;
-  cursor: pointer;
+.matched-user {
+  background-color: #BAE1F2;
+  padding: 2rem;
+  border-radius: 2rem;
 }
 
 .inlogcontainer {
@@ -417,7 +501,6 @@ label img {
 
 :checked + label img {
   transform: scale(0.9);
-  /* box-shadow: 0 0 5px #333; */
   z-index: -1;
 }
 
