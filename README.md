@@ -1,4 +1,6 @@
-# ![Logo](https://github.com/TeunvK/BlokTech/blob/main/assets/logo.png)
+<p align="center">
+ <img src="https://github.com/TeunvK/BlokTech/blob/main/assets/logo.png" width="600">
+  </p>
 
 This repository is for a matching App made for BlokTech 21-22.
   
