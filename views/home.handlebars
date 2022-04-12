@@ -30,6 +30,9 @@
         {{/each}}
         </ul>
                     {{> unmatchPopup name=this.name}}
+                    <noscript>
+                        <button type="submit" id="deletebtn" class="deletebtn btn btn--red btn--wide">Unmatch with the selected user(s)</button>
+                    </noscript>
         </form>
     </section>
 </main>
