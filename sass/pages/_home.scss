@@ -1,103 +1,99 @@
-
-
-.user-container{
+.user-container {
   width: 70%;
   margin-left: auto;
   margin: 4rem auto 1rem auto;
   padding-bottom: 4rem;
 
-  .myprofile-header{
-   margin-bottom: 2rem;
+  .myprofile-header {
+    margin-bottom: 2rem;
   }
 }
 
 
 //list of the added shows from the app's user
-.home-user-c-showList{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 80%;
-    @include center-horizontal;
+.home-user-c-showList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 80%;
+  @include center-horizontal;
 
-    li{
-        font-size: 0.8em;
-        width: 15%;
-        min-width: 10rem;
-        margin: 0.2rem;
+  li {
+    font-size: 0.8em;
+    width: 15%;
+    min-width: 10rem;
+    margin: 0.2rem;
 
-        img{
-          @include show-thumbnail;
-        }
-    }  
+    img {
+      @include show-thumbnail;
+    }
+  }
 }
 
-.home-user-c-btn{
+.home-user-c-btn {
   text-align: center;
   margin-top: 2rem;
 }
 
 
-.home-l-matchList{
-  .mymatches-header{
+.home-l-matchList {
+  .mymatches-header {
     margin-top: 3rem;
     margin-bottom: 2rem;
-   }
+  }
 }
 
 
 //container of all the matches
-.matchList-c-list{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.matchList-c-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 //each individual match
-.matchList-c-user{
-    margin: 1rem;
-    width: 30%; 
-    text-align: center;
+.matchList-c-user {
+  margin: 1rem;
+  width: 30%;
+  text-align: center;
 }
 
 //list of shows of the matched user
-.matchList-user-c-showList{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    li{
-        font-size: 0.8em;
-        width: 30%;
-        max-width: 8rem;
-        min-width: 5rem;
-        margin: 0.2rem;
+.matchList-user-c-showList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 
-        img{
-            @include show-thumbnail;
-        }
-    }  
+  li {
+    font-size: 0.8em;
+    width: 30%;
+    max-width: 8rem;
+    min-width: 5rem;
+    margin: 0.2rem;
+
+    img {
+      @include show-thumbnail;
+    }
+  }
 }
 
 
 //unmatch button
-.x-btn{
+.x-btn {
   top: -3rem;
   right: 0;
 }
-  
 
-.matched-user{
+
+.matched-user {
   background-color: $secondary-blue;
   padding: 2rem;
   border-radius: 2rem;
-  :first-child{
-    margin-bottom: 1rem;
-  }
 
-  input[type=checkbox]:checked ~ #unmatch{
-    display:block;
+  :first-child {
+    margin-bottom: 1rem;
   }
 }

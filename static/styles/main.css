@@ -344,9 +344,6 @@ nav .home-button {
 .matched-user :first-child {
   margin-bottom: 1rem;
 }
-.matched-user input[type=checkbox]:checked ~ #unmatch {
-  display: block;
-}
 
 .inlogcontainer {
   left: 0;

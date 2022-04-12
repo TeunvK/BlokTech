@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "dev": "nodemon app.js & npm run sass",
-    "sass": "sass --watch sass:static/styles"
+    "sass": "sass --watch sass:static/styles",
+    "lint": "eslint --fix . && echo 'Lint complete.'"
   },
   "repository": {
     "type": "git",
